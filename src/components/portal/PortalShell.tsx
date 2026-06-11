@@ -2,13 +2,13 @@ import { Link, Outlet, useRouterState } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { client } from "@/lib/portal-fixtures";
 
-const navItems = [
+const navItems: Array<{ to: "/portal" | "/portal/documents" | "/portal/progress" | "/portal/billing" | "/portal/messages"; label: string; end?: boolean }> = [
   { to: "/portal", label: "Overview", end: true },
   { to: "/portal/documents", label: "Document Lounge" },
   { to: "/portal/progress", label: "Business Progress" },
   { to: "/portal/billing", label: "Financial & Billing" },
   { to: "/portal/messages", label: "Private Advisory" },
-] as const;
+];
 
 export function PortalShell({ children }: { children?: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
