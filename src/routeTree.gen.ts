@@ -9,38 +9,280 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as PortalRouteImport } from './routes/portal'
+import { Route as LegacyRouteImport } from './routes/legacy'
+import { Route as LeadershipRouteImport } from './routes/leadership'
+import { Route as JourneyRouteImport } from './routes/journey'
+import { Route as IndustriesRouteImport } from './routes/industries'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PortalIndexRouteImport } from './routes/portal.index'
+import { Route as PortalProgressRouteImport } from './routes/portal.progress'
+import { Route as PortalMessagesRouteImport } from './routes/portal.messages'
+import { Route as PortalDocumentsRouteImport } from './routes/portal.documents'
+import { Route as PortalBillingRouteImport } from './routes/portal.billing'
 
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortalRoute = PortalRouteImport.update({
+  id: '/portal',
+  path: '/portal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegacyRoute = LegacyRouteImport.update({
+  id: '/legacy',
+  path: '/legacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LeadershipRoute = LeadershipRouteImport.update({
+  id: '/leadership',
+  path: '/leadership',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JourneyRoute = JourneyRouteImport.update({
+  id: '/journey',
+  path: '/journey',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesRoute = IndustriesRouteImport.update({
+  id: '/industries',
+  path: '/industries',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudiesRoute = CaseStudiesRouteImport.update({
+  id: '/case-studies',
+  path: '/case-studies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PortalIndexRoute = PortalIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => PortalRoute,
+} as any)
+const PortalProgressRoute = PortalProgressRouteImport.update({
+  id: '/progress',
+  path: '/progress',
+  getParentRoute: () => PortalRoute,
+} as any)
+const PortalMessagesRoute = PortalMessagesRouteImport.update({
+  id: '/messages',
+  path: '/messages',
+  getParentRoute: () => PortalRoute,
+} as any)
+const PortalDocumentsRoute = PortalDocumentsRouteImport.update({
+  id: '/documents',
+  path: '/documents',
+  getParentRoute: () => PortalRoute,
+} as any)
+const PortalBillingRoute = PortalBillingRouteImport.update({
+  id: '/billing',
+  path: '/billing',
+  getParentRoute: () => PortalRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/case-studies': typeof CaseStudiesRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/industries': typeof IndustriesRoute
+  '/journey': typeof JourneyRoute
+  '/leadership': typeof LeadershipRoute
+  '/legacy': typeof LegacyRoute
+  '/portal': typeof PortalRouteWithChildren
+  '/services': typeof ServicesRoute
+  '/portal/billing': typeof PortalBillingRoute
+  '/portal/documents': typeof PortalDocumentsRoute
+  '/portal/messages': typeof PortalMessagesRoute
+  '/portal/progress': typeof PortalProgressRoute
+  '/portal/': typeof PortalIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/case-studies': typeof CaseStudiesRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/industries': typeof IndustriesRoute
+  '/journey': typeof JourneyRoute
+  '/leadership': typeof LeadershipRoute
+  '/legacy': typeof LegacyRoute
+  '/services': typeof ServicesRoute
+  '/portal/billing': typeof PortalBillingRoute
+  '/portal/documents': typeof PortalDocumentsRoute
+  '/portal/messages': typeof PortalMessagesRoute
+  '/portal/progress': typeof PortalProgressRoute
+  '/portal': typeof PortalIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/case-studies': typeof CaseStudiesRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/industries': typeof IndustriesRoute
+  '/journey': typeof JourneyRoute
+  '/leadership': typeof LeadershipRoute
+  '/legacy': typeof LegacyRoute
+  '/portal': typeof PortalRouteWithChildren
+  '/services': typeof ServicesRoute
+  '/portal/billing': typeof PortalBillingRoute
+  '/portal/documents': typeof PortalDocumentsRoute
+  '/portal/messages': typeof PortalMessagesRoute
+  '/portal/progress': typeof PortalProgressRoute
+  '/portal/': typeof PortalIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/case-studies'
+    | '/contact'
+    | '/gallery'
+    | '/industries'
+    | '/journey'
+    | '/leadership'
+    | '/legacy'
+    | '/portal'
+    | '/services'
+    | '/portal/billing'
+    | '/portal/documents'
+    | '/portal/messages'
+    | '/portal/progress'
+    | '/portal/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/case-studies'
+    | '/contact'
+    | '/gallery'
+    | '/industries'
+    | '/journey'
+    | '/leadership'
+    | '/legacy'
+    | '/services'
+    | '/portal/billing'
+    | '/portal/documents'
+    | '/portal/messages'
+    | '/portal/progress'
+    | '/portal'
+  id:
+    | '__root__'
+    | '/'
+    | '/case-studies'
+    | '/contact'
+    | '/gallery'
+    | '/industries'
+    | '/journey'
+    | '/leadership'
+    | '/legacy'
+    | '/portal'
+    | '/services'
+    | '/portal/billing'
+    | '/portal/documents'
+    | '/portal/messages'
+    | '/portal/progress'
+    | '/portal/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CaseStudiesRoute: typeof CaseStudiesRoute
+  ContactRoute: typeof ContactRoute
+  GalleryRoute: typeof GalleryRoute
+  IndustriesRoute: typeof IndustriesRoute
+  JourneyRoute: typeof JourneyRoute
+  LeadershipRoute: typeof LeadershipRoute
+  LegacyRoute: typeof LegacyRoute
+  PortalRoute: typeof PortalRouteWithChildren
+  ServicesRoute: typeof ServicesRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portal': {
+      id: '/portal'
+      path: '/portal'
+      fullPath: '/portal'
+      preLoaderRoute: typeof PortalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legacy': {
+      id: '/legacy'
+      path: '/legacy'
+      fullPath: '/legacy'
+      preLoaderRoute: typeof LegacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/leadership': {
+      id: '/leadership'
+      path: '/leadership'
+      fullPath: '/leadership'
+      preLoaderRoute: typeof LeadershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/journey': {
+      id: '/journey'
+      path: '/journey'
+      fullPath: '/journey'
+      preLoaderRoute: typeof JourneyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries': {
+      id: '/industries'
+      path: '/industries'
+      fullPath: '/industries'
+      preLoaderRoute: typeof IndustriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies': {
+      id: '/case-studies'
+      path: '/case-studies'
+      fullPath: '/case-studies'
+      preLoaderRoute: typeof CaseStudiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,12 +290,85 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/portal/': {
+      id: '/portal/'
+      path: '/'
+      fullPath: '/portal/'
+      preLoaderRoute: typeof PortalIndexRouteImport
+      parentRoute: typeof PortalRoute
+    }
+    '/portal/progress': {
+      id: '/portal/progress'
+      path: '/progress'
+      fullPath: '/portal/progress'
+      preLoaderRoute: typeof PortalProgressRouteImport
+      parentRoute: typeof PortalRoute
+    }
+    '/portal/messages': {
+      id: '/portal/messages'
+      path: '/messages'
+      fullPath: '/portal/messages'
+      preLoaderRoute: typeof PortalMessagesRouteImport
+      parentRoute: typeof PortalRoute
+    }
+    '/portal/documents': {
+      id: '/portal/documents'
+      path: '/documents'
+      fullPath: '/portal/documents'
+      preLoaderRoute: typeof PortalDocumentsRouteImport
+      parentRoute: typeof PortalRoute
+    }
+    '/portal/billing': {
+      id: '/portal/billing'
+      path: '/billing'
+      fullPath: '/portal/billing'
+      preLoaderRoute: typeof PortalBillingRouteImport
+      parentRoute: typeof PortalRoute
+    }
   }
 }
 
+interface PortalRouteChildren {
+  PortalBillingRoute: typeof PortalBillingRoute
+  PortalDocumentsRoute: typeof PortalDocumentsRoute
+  PortalMessagesRoute: typeof PortalMessagesRoute
+  PortalProgressRoute: typeof PortalProgressRoute
+  PortalIndexRoute: typeof PortalIndexRoute
+}
+
+const PortalRouteChildren: PortalRouteChildren = {
+  PortalBillingRoute: PortalBillingRoute,
+  PortalDocumentsRoute: PortalDocumentsRoute,
+  PortalMessagesRoute: PortalMessagesRoute,
+  PortalProgressRoute: PortalProgressRoute,
+  PortalIndexRoute: PortalIndexRoute,
+}
+
+const PortalRouteWithChildren =
+  PortalRoute._addFileChildren(PortalRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CaseStudiesRoute: CaseStudiesRoute,
+  ContactRoute: ContactRoute,
+  GalleryRoute: GalleryRoute,
+  IndustriesRoute: IndustriesRoute,
+  JourneyRoute: JourneyRoute,
+  LeadershipRoute: LeadershipRoute,
+  LegacyRoute: LegacyRoute,
+  PortalRoute: PortalRouteWithChildren,
+  ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
