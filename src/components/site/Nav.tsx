@@ -38,12 +38,12 @@ export function Nav() {
           </span>
         </Link>
 
-        <div className="hidden lg:flex items-center gap-9 text-[11px] uppercase tracking-[0.2em] font-medium text-navy">
+        <div className="hidden lg:flex items-center gap-8 text-[11px] uppercase tracking-[0.2em] font-medium text-navy">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className="hover:text-gold transition-colors"
+              className="py-1 hover:text-gold transition-colors"
               activeProps={{ className: "text-gold" }}
             >
               {l.label}
@@ -51,7 +51,7 @@ export function Nav() {
           ))}
           <Link
             to="/portal"
-            className="px-5 py-2.5 border border-navy/30 hover:border-navy hover:bg-navy hover:text-sand transition-colors"
+            className="ml-2 px-5 py-2.5 border border-navy/30 hover:border-navy hover:bg-navy hover:text-sand transition-colors"
           >
             Client Portal
           </Link>
