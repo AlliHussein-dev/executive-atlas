@@ -5,7 +5,7 @@ import { progress, deadlines } from "@/lib/portal-fixtures";
 export const Route = createFileRoute("/portal/progress")({
   head: () => ({
     meta: [
-      { title: "Business Progress — Etihad Private Portal" },
+      { title: "Business Progress — Etihad Client Portal" },
       { name: "description", content: "Active applications, visa updates, renewals and deadlines." },
       { name: "robots", content: "noindex" },
     ],

@@ -76,7 +76,7 @@ export function Footer() {
             </li>
             <li>
               <Link to="/portal" className="hover:text-gold transition-colors">
-                Private Portal
+                Client Portal
               </Link>
             </li>
           </ul>
