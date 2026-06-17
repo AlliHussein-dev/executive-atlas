@@ -5,7 +5,7 @@ import { invoices } from "@/lib/portal-fixtures";
 export const Route = createFileRoute("/portal/billing")({
   head: () => ({
     meta: [
-      { title: "Financial & Billing — Etihad Private Portal" },
+      { title: "Financial & Billing — Etihad Client Portal" },
       { name: "description", content: "Service invoices, government fees and payment records." },
       { name: "robots", content: "noindex" },
     ],

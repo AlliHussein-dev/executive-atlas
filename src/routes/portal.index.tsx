@@ -5,7 +5,7 @@ import { client, advisor, upcomingMeetings, deadlines } from "@/lib/portal-fixtu
 export const Route = createFileRoute("/portal/")({
   head: () => ({
     meta: [
-      { title: "Private Client Portal — Etihad Consultancy" },
+      { title: "Client Portal — Etihad Consultancy" },
       { name: "description", content: "Private executive workspace for Etihad clients." },
       { name: "robots", content: "noindex" },
     ],

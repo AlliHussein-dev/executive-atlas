@@ -53,7 +53,7 @@ export function Nav() {
             to="/portal"
             className="px-5 py-2.5 border border-navy/30 hover:border-navy hover:bg-navy hover:text-sand transition-colors"
           >
-            Private Portal
+            Client Portal
           </Link>
         </div>
 
@@ -89,7 +89,7 @@ export function Nav() {
             onClick={() => setOpen(false)}
             className="mt-2 inline-block px-5 py-3 border border-navy/30 text-navy w-fit"
           >
-            Private Portal
+            Client Portal
           </Link>
         </div>
       )}

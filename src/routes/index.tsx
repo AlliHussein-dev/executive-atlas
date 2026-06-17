@@ -93,7 +93,7 @@ function Hero() {
               to="/portal"
               className="px-8 py-5 border border-navy/30 text-navy text-[11px] uppercase tracking-[0.2em] font-semibold hover:border-navy hover:bg-navy hover:text-sand transition-all"
             >
-              Enter Private Client Portal
+              Enter Client Portal
             </Link>
           </div>
         </motion.div>
@@ -495,7 +495,7 @@ function ContactCta() {
             Schedule Executive Consultation
           </Link>
           <Link to="/portal" className="px-10 py-5 border border-sand/30 text-sand text-[11px] uppercase tracking-[0.2em] font-bold hover:border-sand hover:bg-sand hover:text-navy transition-all">
-            Enter Private Client Portal
+            Enter Client Portal
           </Link>
         </div>
       </div>

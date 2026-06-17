@@ -6,7 +6,7 @@ import { messages as seedMessages, advisor } from "@/lib/portal-fixtures";
 export const Route = createFileRoute("/portal/messages")({
   head: () => ({
     meta: [
-      { title: "Private Advisory — Etihad Private Portal" },
+      { title: "Private Advisory — Etihad Client Portal" },
       { name: "description", content: "Direct private communication with your dedicated advisor." },
       { name: "robots", content: "noindex" },
     ],

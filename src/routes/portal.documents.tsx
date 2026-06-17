@@ -6,7 +6,7 @@ import { documents } from "@/lib/portal-fixtures";
 export const Route = createFileRoute("/portal/documents")({
   head: () => ({
     meta: [
-      { title: "Document Lounge — Etihad Private Portal" },
+      { title: "Document Lounge — Etihad Client Portal" },
       { name: "description", content: "Secure document lounge." },
       { name: "robots", content: "noindex" },
     ],
