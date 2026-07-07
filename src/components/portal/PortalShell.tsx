@@ -21,8 +21,8 @@ export function PortalShell({ children }: { children?: ReactNode }) {
     <div className="min-h-screen bg-sand text-navy">
       {/* Mobile / tablet top bar (< lg) */}
       <div className="lg:hidden bg-navy text-sand">
-        <div className="px-5 sm:px-8 py-5 flex items-center justify-between border-b border-sand/10">
-          <Link to="/" className="block">
+        <div className="px-5 sm:px-8 py-5 flex items-center justify-between gap-4 border-b border-sand/10">
+          <Link to="/" className="block min-w-0">
             <div className="font-display tracking-widest font-bold leading-none">
               <span className="text-base">ETIHAD</span>
               <span className="text-base font-light opacity-60 italic ml-1.5">Consultancy</span>
@@ -31,9 +31,9 @@ export function PortalShell({ children }: { children?: ReactNode }) {
               Client Portal
             </p>
           </Link>
-          <div className="text-right">
-            <p className="font-display text-sm leading-tight">{client.shortName}</p>
-            <p className="text-[9px] uppercase tracking-[0.2em] text-gold mt-1 font-semibold">
+          <div className="text-right shrink-0 max-w-[45%]">
+            <p className="font-display text-sm leading-tight truncate">{client.shortName}</p>
+            <p className="hidden sm:block text-[9px] uppercase tracking-[0.2em] text-gold mt-1 font-semibold truncate">
               {client.membership}
             </p>
           </div>
@@ -45,7 +45,7 @@ export function PortalShell({ children }: { children?: ReactNode }) {
               <Link
                 key={item.to}
                 to={item.to}
-                className={`flex-shrink-0 px-5 py-4 text-[10px] uppercase tracking-[0.2em] font-semibold border-b-2 transition-colors ${
+                className={`flex-shrink-0 px-4 sm:px-5 py-3.5 text-[10px] uppercase tracking-[0.2em] font-semibold border-b-2 transition-colors ${
                   active
                     ? "border-gold text-gold"
                     : "border-transparent text-sand/70 hover:text-sand"
