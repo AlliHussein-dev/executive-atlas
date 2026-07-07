@@ -73,7 +73,7 @@ export function Nav() {
       </div>
 
       {open && (
-        <div className="lg:hidden bg-sand border-t border-navy/5 px-6 py-8 flex flex-col gap-5 text-[11px] uppercase tracking-[0.2em] font-medium">
+        <div className="lg:hidden bg-sand border-t border-navy/5 px-6 sm:px-8 py-10 flex flex-col gap-6 text-[11px] uppercase tracking-[0.2em] font-medium">
           {links.map((l) => (
             <Link
               key={l.to}
@@ -87,7 +87,7 @@ export function Nav() {
           <Link
             to="/portal"
             onClick={() => setOpen(false)}
-            className="mt-2 inline-block px-5 py-3 border border-navy/30 text-navy w-fit"
+            className="mt-3 inline-block px-6 py-3.5 border border-navy/30 text-navy w-fit"
           >
             Client Portal
           </Link>
