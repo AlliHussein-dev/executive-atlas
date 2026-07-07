@@ -1,0 +1,6 @@
+[build]
+  command = "bun run build"
+  publish = "dist"
+
+# Nitro's netlify preset emits functions + redirects automatically.
+# No SPA fallback needed — this is SSR, not a static site.
