@@ -30,7 +30,7 @@ export function Nav() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between gap-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-12 h-20 lg:h-24 flex items-center justify-between gap-10">
         <Link to="/" className="font-display tracking-widest font-bold text-navy shrink-0">
           <span className="text-xl">ETIHAD</span>
           <span className="text-xl font-light opacity-60 italic ml-2">
