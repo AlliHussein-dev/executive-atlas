@@ -143,7 +143,7 @@ export function PortalHeading({
   intro?: string;
 }) {
   return (
-    <div className="mb-10 sm:mb-12 lg:mb-14">
+    <div className="mb-12 sm:mb-14 lg:mb-16">
       <p className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold mb-4">
         {eyebrow}
       </p>
